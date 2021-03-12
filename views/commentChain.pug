@@ -1,0 +1,24 @@
+html
+  head 
+    title Comments
+  body
+    div
+      h2 Something here
+      table(border='1')
+        col(width="150")
+        col(width="300")
+        thead
+          th Autor Name
+          th Comment
+          th likeCount
+        tbody(style="text-align: left;")
+        each val, index in data.items
+          tr
+            th 
+              a(href=val.snippet.authorChannelUrl)!= val.snippet.authorDisplayName
+            th
+              text!= val.snippet.textDisplay
+            th
+              text!= val.snippet.likeCount
+                
+          
