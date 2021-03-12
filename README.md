@@ -1,6 +1,10 @@
 ## YouTube comment searcher
 Searches for strings in Youtube video comments.
 
+#### Install
+- git clone the repository
+- install dependencies with  ```npm i```
+
 #### Setup
 Create a youtube app at http://console.developers.google.com and give it access to the Youtube v3 api.
 
