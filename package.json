@@ -1,9 +1,10 @@
 {
-  "name": "youtubeCommentCrawler",
+  "name": "youtube-comment-searcher",
   "version": "1.0.0",
   "dependencies": {
     "express": "^4.17.1",
     "googleapis": "^67.1.1",
-    "open": "^8.0.2"
+    "open": "^8.0.2",
+    "pug": "^3.0.2"
   }
 }
