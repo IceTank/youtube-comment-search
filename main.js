@@ -10,12 +10,18 @@ const scopes = [
   'https://www.googleapis.com/auth/youtube.force-ssl'
 ];
 
-try {
-  secret = JSON.parse(fs.readFileSync('clientSecret.json', 'utf8'));
-} catch (e) {
-  console.error('Reading clientSecret.json failed (not present?)');
+// try {
+//   secret = JSON.parse(fs.readFileSync('clientSecret.json', 'utf8'));
+// } catch (e) {
+//   console.error('Reading clientSecret.json failed (not present?)');
+// }
+secret = {
+  clientSecret: process.env.clientSecret,
+  clientId: process.env.clientId
 }
-
+if (!secret?.clientSecret || !secret?.clientId) {
+  throw Error('No client id or secret set')
+}
 
 const oauth2Client = googleapis.newOAuth2Client(
     secret.clientId,
